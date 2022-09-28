@@ -53,6 +53,14 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+.myImage {
+  border-radius: 10%;
+  filter: grayscale(70%);
+  text-align: right;
+  height: 90%;
+  margin-left: 15%;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -103,6 +111,7 @@ h6 {
   margin: 0;
 }
 
+
 #header .social-links {
   margin-top: 40px;
   display: flex;
@@ -144,6 +153,10 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .myImage{
+    margin-left: 25%;
   }
 }
 
