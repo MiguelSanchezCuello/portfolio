@@ -1,4 +1,18 @@
+
 <?php
+  /*
+    Esto parece funcionar pero no funcionara en github porque github no permite
+    ningun tipo de programacion en el lado del servidor.
+
+    Luego intente usar mi archivo php desde un servidor externo en infinity free
+    pero por la politica de seguiridad de cross-origin recibo el error HTTP 500
+    para que esto funcione debe estar en el mismo dominio y servidor, lo guardo por aca
+    para habilitarlo cuando lo publique en mi dominio propio y no en github.
+
+    ojo: es posible que para utilizar esto con este tema tengamos que deshabilitar, ya sea por comentario o por eliminacion
+    el archivo ./assets/vendor/php-email-form/validate.js
+  */
+
   if(isset($_POST['submit']){
     $name = $_POST['name'];
     $mailFrom = $_POST['email'];
@@ -12,46 +26,4 @@
     mail($mailTo, $subject, $txt, $headers);
     header("Location: index.html?mailsend");
   }
-  
-  
-
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
-
-  // Replace contact@example.com with your real receiving email address
-  /* $receiving_email_address = 'contact@example.com';
-
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
-
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject']; */
-
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
-
-  /* $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contact->send(); */
 ?>
