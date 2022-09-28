@@ -34,6 +34,12 @@ body::before {
   }
 }
 
+@media (min-width: 1200px){
+  .myImage{
+    margin-left: 10%;
+  }
+}
+
 a {
   color: #18d26e;
   text-decoration: none;
@@ -55,10 +61,8 @@ h6 {
 
 .myImage {
   border-radius: 10%;
-  filter: grayscale(70%);
-  text-align: right;
+  filter: grayscale(80%);
   height: 90%;
-  margin-left: 15%;
 }
 
 /*--------------------------------------------------------------
