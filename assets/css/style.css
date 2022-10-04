@@ -65,6 +65,13 @@ h6 {
   height: 90%;
 }
 
+.cs-qa{
+  font-size:medium !important;
+}
+
+.cs-qa > span {
+  border-bottom: 1px solid gray !important;
+}
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
